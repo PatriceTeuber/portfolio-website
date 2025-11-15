@@ -1,12 +1,17 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Environment, PresentationControls } from "@react-three/drei";
+import { Suspense, useEffect, useRef } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
+import {
+  Environment,
+  PresentationControls,
+} from "@react-three/drei";
 import CanvasLoader from "./Loader";
-import Lighthouse from "./Lighthouse";
 import CameraController from "./CameraController";
-import LightBeam from "./LightBeam";
+import ScrollLighthouse from "./ScrollLightHouse";
+import * as THREE from "three";
 
 const CustomCanvas = () => {
+  const lighthouseGroupRef = useRef<THREE.Object3D | null>(null);
+
   return (
     <Canvas
       gl={{ preserveDrawingBuffer: true }}
@@ -18,17 +23,7 @@ const CustomCanvas = () => {
         <Environment preset="night" />
         <CameraController />
         <ambientLight intensity={0.4} />
-        <PresentationControls
-          enabled={true}
-          global={false}
-          polar={[0, Math.PI / 9]}
-          azimuth={[-0.2, 0.2]}
-          snap={true}
-        >
-
-          <Lighthouse />
-          <LightBeam />
-        </PresentationControls>
+        <ScrollLighthouse ref={lighthouseGroupRef} />
       </Suspense>
     </Canvas>
   );

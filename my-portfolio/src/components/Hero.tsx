@@ -3,7 +3,7 @@ import Canvas from "./Canvas/Canvas";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-screen hero">
       <Canvas />
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="flex justify-between w-[80%] text-6xl font-semibold tracking-widest">
