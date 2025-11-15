@@ -17,21 +17,19 @@ const CustomCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <Environment preset="night" />
         <CameraController />
-        <ambientLight intensity={0.3} />
-      
+        <ambientLight intensity={0.4} />
         <PresentationControls
-        enabled={true} 
-        global={false}
-        polar={[0, Math.PI / 9]}
-        azimuth={[-0.2, 0.2]}
-        snap={true}
+          enabled={true}
+          global={false}
+          polar={[0, Math.PI / 9]}
+          azimuth={[-0.2, 0.2]}
+          snap={true}
         >
+
           <Lighthouse />
           <LightBeam />
         </PresentationControls>
       </Suspense>
-
-      
     </Canvas>
   );
 };
