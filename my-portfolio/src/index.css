@@ -9,10 +9,6 @@ html, body, #root {
   /* Allow page scrolling so sections below the hero are reachable */
   overflow-y: auto;
   font-family: 'Inter', sans-serif;
-}
-
-/* Enable smooth scrolling for anchor links */
-html {
   scroll-behavior: smooth;
 }
 
