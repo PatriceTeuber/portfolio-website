@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { styles } from "../styles";
 
 export default function Experiences() {
   return (
@@ -13,8 +14,8 @@ export default function Experiences() {
         transition={{ duration: 0.6 }}
         className="text-center"
       >
-        <p className="text-gray-400 text-lg">My Journey</p>
-        <h2 className="text-4xl font-bold mt-2">Experiences</h2>
+        <p className={styles.sectionSubText}>My Journey</p>
+        <h2 className={styles.sectionHeadText}>Experiences</h2>
       </motion.div>
 
       {/* Frontend + Backend Tiles */}

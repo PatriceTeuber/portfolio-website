@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-10 flex flex-col items-center bg-transparent">
       {/* Navigation */}
-      <a href="#hero" className="text-4xl mt-2 mb-6 hover:opacity-70 transition">Patrice Teuber</a>
+      <a href="#hero" className="text-gray-200 text-4xl mt-2 mb-6 hover:opacity-70 transition">Patrice Teuber</a>
 
       <ul className="flex gap-10 mb-6 text-base font-medium">
         <li>
@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="flex gap-6">
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/patrice-teuber-84814b373"
           target="_blank"
           className="p-3 bg-[#1d2746] rounded-xl shadow-md hover:scale-105 transition-transform"
         >
