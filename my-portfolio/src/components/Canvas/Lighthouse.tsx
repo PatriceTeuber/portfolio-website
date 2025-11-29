@@ -1,15 +1,27 @@
 import { useGLTF } from "@react-three/drei";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 
 const Lighthouse = () => {
-  const lighthouseModel = useGLTF("./lighthouse/lighthouse.glb");
+  const { scene } = useGLTF("./lighthouse/lighthouse.glb");
   const ref = useRef<THREE.Group>(null);
+
+  // Nach dem Laden alle Materialien in Wireframe umwandeln
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child instanceof THREE.Mesh) {
+        child.material = new THREE.MeshBasicMaterial({
+          color: "white",
+          wireframe: true,
+        });
+      }
+    });
+  }, [scene]);
 
   return (
     <group ref={ref} position={[0, 0, 0]} scale={15}>
-      <primitive object={lighthouseModel.scene} />
+      <primitive object={scene} />
     </group>
   );
 };

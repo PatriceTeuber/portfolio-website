@@ -11,7 +11,6 @@ const Hero = () => {
                   text-2xl sm:text-3xl md:text-3xl lg:text-3xl">
     Patrice
   </span>
-
   <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]
                   text-2xl sm:text-3xl md:text-3xl lg:text-3xl">
     Teuber
