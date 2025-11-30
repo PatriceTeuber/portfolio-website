@@ -4,7 +4,7 @@ import * as THREE from "three";
 
 
 const Lighthouse = () => {
-  const { scene } = useGLTF("./lighthouse/lighthouse.glb");
+  const { scene } = useGLTF("./lighthouse/lighthouse_blender.glb");
   const ref = useRef<THREE.Group>(null);
 
   // Nach dem Laden alle Materialien in Wireframe umwandeln
@@ -20,7 +20,7 @@ const Lighthouse = () => {
   }, [scene]);
 
   return (
-    <group ref={ref} position={[0, 0, 0]} scale={15}>
+    <group ref={ref} position={[0, -7.25, 0]} scale={0.25}>
       <primitive object={scene} />
     </group>
   );
@@ -28,4 +28,4 @@ const Lighthouse = () => {
 
 export default Lighthouse;
 
-useGLTF.preload("./lighthouse/lighthouse.glb");
+useGLTF.preload("./lighthouse/lighthouse_blender.glb");

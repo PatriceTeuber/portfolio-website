@@ -7,6 +7,7 @@ import {
 import CanvasLoader from "./Loader";
 import CameraController from "./CameraController";
 import ScrollLighthouse from "./ScrollLightHouse";
+import Seagulls from "./Seagulls";
 
 
 const CustomCanvas = () => {
@@ -30,6 +31,7 @@ const CustomCanvas = () => {
           snap={true}
         >        
           <ScrollLighthouse/>
+          <Seagulls />
         </PresentationControls>
       </Suspense>
     </Canvas>

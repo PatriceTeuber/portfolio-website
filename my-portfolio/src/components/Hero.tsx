@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="flex justify-between w-[80%] text-6xl font-semibold tracking-widest">
           <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]
-                  text-2xl sm:text-3xl md:text-3xl lg:text-3xl">
+                  text-2xl sm:text-3xl md:text-3xl lg:text-4xl">
     Patrice
   </span>
   <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]
-                  text-2xl sm:text-3xl md:text-3xl lg:text-3xl">
+                  text-2xl sm:text-3xl md:text-3xl lg:text-4xl">
     Teuber
   </span>
         </div>
