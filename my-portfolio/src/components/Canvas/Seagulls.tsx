@@ -1,14 +1,18 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useAnimations } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 
 const Seagulls = () => {
-  const { scene } = useGLTF("./seagulls/seagulls_animated.glb");
+  const { scene, animations } = useGLTF("./seagulls/seagulls_animated.glb");
+  const { actions } = useAnimations(animations, scene);
+
   const ref = useRef<THREE.Group>(null);
+  
 
   // Nach dem Laden alle Materialien in Wireframe umwandeln
   useEffect(() => {
+    //Object.values(actions).forEach((action) => action?.play());
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh) {
         child.material = new THREE.MeshBasicMaterial({
@@ -17,10 +21,10 @@ const Seagulls = () => {
         });
       }
     });
-  }, [scene]);
+  }, [scene, actions]);
 
   return (
-    <group ref={ref} position={[-3, 4, -5]} scale={0.25}>
+    <group ref={ref} position={[-3, 3.5, -5]} scale={0.25}>
       <primitive object={scene} />
     </group>
   );
