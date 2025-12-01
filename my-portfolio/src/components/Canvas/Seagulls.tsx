@@ -1,9 +1,10 @@
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
+import type { DisplaySizeProps } from "./Canvas";
 
 
-const Seagulls = () => {
+const Seagulls = ({ small = false }: DisplaySizeProps) => {
   const { scene, animations } = useGLTF("./seagulls/seagulls_animated.glb");
   const { actions } = useAnimations(animations, scene);
 
@@ -24,7 +25,7 @@ const Seagulls = () => {
   }, [scene, actions]);
 
   return (
-    <group ref={ref} position={[-3, 3.5, -5]} scale={0.25}>
+    <group ref={ref} position={small ? [-3, 3.5, -5] : [-3.5, 2.75, -4]} scale={small ? 0.25 : 0.275}>
       <primitive object={scene} />
     </group>
   );

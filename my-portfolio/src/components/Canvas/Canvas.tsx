@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Environment,
@@ -9,8 +9,25 @@ import CameraController from "./CameraController";
 import ScrollLighthouse from "./ScrollLightHouse";
 import Seagulls from "./Seagulls";
 
+export interface DisplaySizeProps {
+  small?: boolean; // optional oder => small: boolean
+}
+
 
 const CustomCanvas = () => {
+
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => {
+      setIsSmall(window.innerWidth < 640);
+    };
+
+    checkSize(); // direkt beim ersten Render prüfen
+    window.addEventListener("resize", checkSize);
+
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
   return (
     <Canvas
@@ -30,8 +47,8 @@ const CustomCanvas = () => {
           azimuth={[-0.2, 0.2]}
           snap={true}
         >        
-          <ScrollLighthouse/>
-          <Seagulls />
+          <ScrollLighthouse small={isSmall}/>
+          <Seagulls small={isSmall}/>
         </PresentationControls>
       </Suspense>
     </Canvas>

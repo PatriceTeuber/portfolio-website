@@ -1,9 +1,9 @@
 import { useGLTF } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
+import type { DisplaySizeProps } from "./Canvas";
 
-
-const Lighthouse = () => {
+const Lighthouse = ({ small = false }: DisplaySizeProps) => {
   const { scene } = useGLTF("./lighthouse/lighthouse_blender.glb");
   const ref = useRef<THREE.Group>(null);
 
@@ -20,7 +20,7 @@ const Lighthouse = () => {
   }, [scene]);
 
   return (
-    <group ref={ref} position={[0, -7.25, 0]} scale={0.25}>
+    <group ref={ref} position={small ? [0, -1.5, 0] : [0, -7.25, 0]} scale={small ? 0.1 : 0.25}>
       <primitive object={scene} />
     </group>
   );
