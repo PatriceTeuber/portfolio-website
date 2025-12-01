@@ -9,7 +9,9 @@ const styles = {
     " text-gray-400 sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 
   cards:
-    "bg-gray-900/70 backdrop-blur rounded-2xl p-6 shadow-lg border border-gray-800 hover:border-gray-700 transition-colors"
+    "bg-gray-900/70 backdrop-blur rounded-2xl p-6 shadow-lg border border-gray-800 hover:border-gray-700 transition-colors",
+
+  mainAccentColor: "bg-sky-500"
 };
 
 export { styles };
