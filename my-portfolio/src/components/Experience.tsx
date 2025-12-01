@@ -1,6 +1,24 @@
 import { motion } from "motion/react";
 import { styles } from "../styles";
 
+const items = [
+  {
+    title: "Projekt: Webportal für Kundenverwaltung",
+    year: "2022",
+    tech: "React, Tailwind, Node.js, MongoDB",
+  },
+  {
+    title: "Projekt: Mobile App für interne Logistik",
+    year: "2023",
+    tech: "React Native, TypeScript, Firebase",
+  },
+  {
+    title: "Projekt: Dashboard für Datenanalyse",
+    year: "2024",
+    tech: "Next.js, PostgreSQL, Prisma, Chart Libraries",
+  },
+];
+
 export default function Experiences() {
   return (
     <section
@@ -55,37 +73,29 @@ export default function Experiences() {
         </motion.div>
       </div>
 
-      {/* Timeline */}
-      <div className="mt-20 w-full max-w-4xl relative border-l border-gray-700 pl-8">
-        {[{
-          title: "Projekt: Webportal für Kundenverwaltung",
-          year: "2022",
-          tech: "React, Tailwind, Node.js, MongoDB",
-        },
-        {
-          title: "Projekt: Mobile App für interne Logistik",
-          year: "2023",
-          tech: "React Native, TypeScript, Firebase",
-        },
-        {
-          title: "Projekt: Dashboard für Datenanalyse",
-          year: "2024",
-          tech: "Next.js, PostgreSQL, Prisma, Chart Libraries",
-        }].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="mb-12 relative"
-          >
-            <div className="absolute -left-4 top-1 w-3 h-3 rounded-full bg-indigo-500"></div>
-            <h4 className="text-lg font-semibold text-white">{item.title}</h4>
-            <p className="text-gray-400 text-sm">{item.year}</p>
-            <p className="text-gray-300 text-sm mt-1">Technologies: {item.tech}</p>
-          </motion.div>
-        ))}
+      {/* Wrapper zentriert die Timeline */}
+      <div className="mt-20 w-full flex justify-center">
+        {/* Actual timeline block */}
+        <div className="relative border-l border-gray-700 pl-8 max-w-4xl w-full">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="mb-12 relative pl-3" // pl-3 damit Text weiter rechts ist
+            >
+              <div
+                className={`absolute -left-4 top-1 w-3 h-3 rounded-full ${styles.mainAccentColor}`}
+              />
+              <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+              <p className="text-gray-400 text-sm">{item.year}</p>
+              <p className="text-gray-300 text-sm mt-1">
+                Technologies: {item.tech}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
