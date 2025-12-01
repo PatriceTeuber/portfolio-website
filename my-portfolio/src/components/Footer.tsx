@@ -1,4 +1,5 @@
 import { Linkedin, Github } from "lucide-react";
+import { styles } from "../styles";
 
 export default function Footer() {
   return (
@@ -17,11 +18,12 @@ export default function Footer() {
             Experience
           </a>
         </li>
+        {/* Navigation 
         <li>
           <a href="#projects" className="hover:opacity-70 transition">
             My Projects
           </a>
-        </li>
+        </li>*/}
       </ul>
 
       <div className="flex gap-6">
@@ -29,7 +31,7 @@ export default function Footer() {
         <a
           href="https://www.linkedin.com/in/patrice-teuber-84814b373"
           target="_blank"
-          className="p-3 bg-[#1d2746] rounded-xl shadow-md hover:scale-105 transition-transform"
+          className={`p-3 bg-[#1d2746] rounded-xl shadow-md hover:scale-105 transition-transform border-1 ${styles.mainAccentColorBorder}`}
         >
           <Linkedin className="w-6 h-6 text-white" />
         </a>
@@ -38,7 +40,7 @@ export default function Footer() {
         <a
           href="https://github.com/PatriceTeuber"
           target="_blank"
-          className="p-3 bg-[#1d2746] rounded-xl shadow-md hover:scale-105 transition-transform"
+          className={`p-3 bg-[#1d2746] rounded-xl shadow-md hover:scale-105 transition-transform border-1 ${styles.mainAccentColorBorder}`}
         >
           <Github className="w-6 h-6 text-white" />
         </a>

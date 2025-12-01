@@ -21,7 +21,7 @@ const Hero = () => {
 
       <div className='absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center'>
         <a href='#about'>
-          <div className={`shadow-xl shadow-black/80 w-[30px] h-[50px] rounded-3xl border-2 ${styles.mainAccentColorBorder} flex justify-center items-start p-2`}>
+          <div className={`shadow-2xl shadow-black/90 w-[30px] h-[50px] rounded-3xl border-2 ${styles.mainAccentColorBorder} flex justify-center items-start p-2`}>
             <motion.div
               animate={{
                 y: [0, 24, 0],
