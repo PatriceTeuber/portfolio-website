@@ -1,5 +1,5 @@
 {
-  "homepage": "https://patriceteuber.github.io/portfolio-website/my-portfolio",
+  "homepage": "https://patriceteuber.github.io/portfolio-website/",
   "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.6",
