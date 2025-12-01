@@ -2,6 +2,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
 import type { DisplaySizeProps } from "./Canvas";
+import { styles } from "../../styles";
 
 
 const Seagulls = ({ small = false }: DisplaySizeProps) => {
@@ -17,7 +18,7 @@ const Seagulls = ({ small = false }: DisplaySizeProps) => {
     scene.traverse((child) => {
       if (child instanceof THREE.Mesh) {
         child.material = new THREE.MeshBasicMaterial({
-          color: "white",
+          color: '#0ea5e9',
           wireframe: true,
         });
       }

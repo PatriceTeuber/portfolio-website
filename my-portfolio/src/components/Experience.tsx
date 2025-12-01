@@ -44,7 +44,7 @@ export default function Experiences() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5 }}
-          className="bg-gray-900/70 backdrop-blur rounded-2xl p-6 shadow-lg border border-gray-800"
+          className={styles.cards}
         >
           <h3 className="text-xl font-semibold mb-2">Frontend</h3>
           <ul className="text-gray-300 text-sm space-y-1">
@@ -61,7 +61,7 @@ export default function Experiences() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-900/70 backdrop-blur rounded-2xl p-6 shadow-lg border border-gray-800"
+          className={styles.cards}
         >
           <h3 className="text-xl font-semibold mb-2">Backend</h3>
           <ul className="text-gray-300 text-sm space-y-1">

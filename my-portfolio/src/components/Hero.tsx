@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import Canvas from "./Canvas/Canvas";
+import { styles } from "../styles";
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
 
       <div className='absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center'>
         <a href='#about'>
-          <div className='shadow-xl shadow-black/80 w-[30px] h-[50px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2'>
+          <div className={`shadow-xl shadow-black/80 w-[30px] h-[50px] rounded-3xl border-2 ${styles.mainAccentColorBorder} flex justify-center items-start p-2`}>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -30,7 +31,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-2 h-2 rounded-full bg-white mb-1"
+              className={`w-2 h-2 rounded-full ${styles.mainAccentColor} mb-1`}
             />
           </div>
         </a>
