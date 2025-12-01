@@ -2,8 +2,6 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
 import type { DisplaySizeProps } from "./Canvas";
-import { styles } from "../../styles";
-
 
 const Seagulls = ({ small = false }: DisplaySizeProps) => {
   const { scene, animations } = useGLTF("./seagulls/seagulls_animated.glb");

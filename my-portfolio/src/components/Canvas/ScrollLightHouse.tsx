@@ -1,5 +1,5 @@
 // ScrollLighthouse.tsx
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import Lighthouse from "./Lighthouse";
 import LightBeam from "./LightBeam";
 import * as THREE from "three";
