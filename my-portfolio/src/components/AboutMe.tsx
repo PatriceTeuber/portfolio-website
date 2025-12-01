@@ -11,7 +11,7 @@ import {
   EffectComposer,
   ToneMapping,
 } from "@react-three/postprocessing";
-import { BriefcaseBusiness, ChevronsLeftRightEllipsis, Globe, GraduationCap } from "lucide-react";
+import { BriefcaseBusiness, Globe, GraduationCap } from "lucide-react";
 
 export default function AboutMe() {
   return (
