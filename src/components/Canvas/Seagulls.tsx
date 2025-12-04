@@ -4,7 +4,7 @@ import * as THREE from "three";
 import type { DisplaySizeProps } from "./Canvas";
 
 const Seagulls = ({ small = false }: DisplaySizeProps) => {
-  const { scene, animations } = useGLTF("./seagulls/seagulls_animated.glb");
+  const { scene, animations } = useGLTF("./portfolio-website/seagulls/seagulls_animated.glb");
   const { actions } = useAnimations(animations, scene);
 
   const ref = useRef<THREE.Group>(null);
@@ -32,4 +32,4 @@ const Seagulls = ({ small = false }: DisplaySizeProps) => {
 
 export default Seagulls;
 
-useGLTF.preload("./seagulls/seagulls_animated.glb");
+useGLTF.preload("./portfolio-website/seagulls/seagulls_animated.glb");
