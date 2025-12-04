@@ -4,7 +4,7 @@ import * as THREE from "three";
 import type { DisplaySizeProps } from "./Canvas";
 
 const Lighthouse = ({ small = false }: DisplaySizeProps) => {
-  const { scene } = useGLTF("./portfolio-website/lighthouse/lighthouse_blender.glb");
+  const { scene } = useGLTF("./lighthouse/lighthouse_blender.glb");
   const ref = useRef<THREE.Group>(null);
 
   // Nach dem Laden alle Materialien in Wireframe umwandeln
@@ -28,4 +28,4 @@ const Lighthouse = ({ small = false }: DisplaySizeProps) => {
 
 export default Lighthouse;
 
-useGLTF.preload("./portfolio-website/lighthouse/lighthouse_blender.glb");
+useGLTF.preload("./lighthouse/lighthouse_blender.glb");

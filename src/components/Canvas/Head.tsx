@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import * as THREE from "three";
 
 const Head = () => {
-  const { scene } = useGLTF("./portfolio-website/head/head.glb");
+  const { scene } = useGLTF("./head/head.glb");
   const ref = useRef<THREE.Group>(null);
 
   // Nur Wireframe – keine Emissive, kein Licht, kein Pulsieren
@@ -29,4 +29,4 @@ const Head = () => {
 
 export default Head;
 
-useGLTF.preload("./portfolio-website/head/head.glb");
+useGLTF.preload("./head/head.glb");
