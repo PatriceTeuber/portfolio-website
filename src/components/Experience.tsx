@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { styles } from "../styles";
-import { div } from "motion/react-client";
 import { Github } from "lucide-react";
 
 const items = [
