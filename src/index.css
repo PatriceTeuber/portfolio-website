@@ -1,4 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600;700&family=Jersey+10&family=Libertinus+Mono&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Playfair Display", serif;
+  --font-hero: "Jersey 10", serif;
+}
 
 html, body, #root {
   width: 100%;
