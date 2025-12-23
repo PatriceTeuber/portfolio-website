@@ -27,7 +27,6 @@ export default function AboutMe() {
         viewport={{ once: false }}
         className="text-center"
       >
-        <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
 
@@ -37,7 +36,7 @@ export default function AboutMe() {
         animate={{ opacity: 1 }}
         viewport={{ once: false }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        className="mt-6 text-secondary text-[17px] max-w-2xl leading-[30px] text-center"
+        className="font-body mt-6 text-secondary max-w-2xl leading-[30px] text-center"
       >
         I am a passionate developer focused on building elegant, responsive, and
         modern digital experiences. With a strong background in frontend and
@@ -46,7 +45,7 @@ export default function AboutMe() {
       </motion.p>
 
       {/* Tiles */}
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className="font-body mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl">
         {/* Degree */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,8 +56,8 @@ export default function AboutMe() {
         >
           <div className="flex flex-col items-start gap-3">
             <GraduationCap className="w-8 h-8 text-white opacity-90" />
-            <h3 className="text-xl font-semibold">Degree</h3>
-            <p className="text-gray-300 text-sm">
+            <h3 className="text-xl">Degree</h3>
+            <p className="text-secondary">
               Bachelor of Science in Computer Science
             </p>
           </div>
@@ -74,8 +73,8 @@ export default function AboutMe() {
         >
           <div className="flex flex-col justify-center items-start gap-3">
             <BriefcaseBusiness className="w-8 h-8 text-white opacity-90" />
-          <h3 className="text-xl font-semibold">Current Job</h3>
-          <p className="text-gray-300 text-sm">
+          <h3 className="text-xl">Current Job</h3>
+          <p className="text-secondary font-body">
             Frontend / Full‑Stack Developer
           </p>
           </div>
@@ -92,8 +91,8 @@ export default function AboutMe() {
         >
           <div className="flex flex-col justify-center items-start gap-3">
             <Globe className="w-8 h-8 text-white opacity-90" />
-          <h3 className="text-xl font-semibold">Domains</h3>
-          <p className="text-gray-300 text-sm">
+          <h3 className="text-xl">Domains</h3>
+          <p className="text-secondary font-body">
             Web & Mobile Applications
           </p>
           </div>
