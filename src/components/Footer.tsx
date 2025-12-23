@@ -3,11 +3,11 @@ import { styles } from "../styles";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-10 flex flex-col items-center bg-transparent">
+    <footer className="w-full py-10 flex flex-col items-center bg-transparent font-body">
       {/* Navigation */}
-      <a href="#hero" className="text-gray-200 text-4xl mt-2 mb-6 hover:opacity-70 transition">Patrice Teuber</a>
+      <a href="#hero" className="text-xl mt-2 mb-6 hover:opacity-70 transition">Patrice Teuber</a>
 
-      <ul className="flex gap-10 mb-6 text-base font-medium">
+      <ul className="flex gap-10 mb-6 text-secondary">
         <li>
           <a href="#about" className="hover:opacity-70 transition">
             About
@@ -46,7 +46,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <p className="text-gray-700 text-sm mt-4">
+      <p className="text-sky-500 text-sm mt-4 font-body">
         © {new Date().getFullYear()} Patrice Teuber — All Rights Reserved
       </p>
     </footer>
