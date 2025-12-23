@@ -9,11 +9,11 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="flex justify-between w-[80%] text-6xl font-semibold tracking-widest">
           <span className="text-black
-                  text-lg sm:text-3xl md:text-3xl lg:text-4xl">
+                  text-lg sm:text-3xl md:text-3xl lg:text-4xl font-heading">
             Patrice
           </span>
           <span className="text-black
-                          text-lg sm:text-3xl md:text-3xl lg:text-4xl">
+                          text-lg sm:text-3xl md:text-3xl lg:text-4xl font-heading">
             Teuber
           </span>
         </div>
